@@ -1,0 +1,12 @@
+<Configuration>
+    <MappedFolders>
+        <MappedFolder>
+            <HostFolder>.\Scripts</HostFolder>
+            <ReadOnly>true</ReadOnly>
+        </MappedFolder>
+    </MappedFolders>
+    <LogonCommand>
+        <Command>powershell -executionpolicy unrestricted -file
+            "C:\Users\WDAGUtilityAccount\Desktop\Scripts\Setup.ps1"</Command>
+    </LogonCommand>
+</Configuration>  
