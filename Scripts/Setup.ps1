@@ -1,10 +1,11 @@
 New-Item -type Directory C:\Script_TMP
 Set-Location C:\Script_TMP
 
+curl.exe -fsSOL  https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx
 curl.exe -fsSOL https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx
 curl.exe -fsSL https://aka.ms/getwinget -o winget.msixbundle
 
-Install-Package -source https://www.nuget.org/api/v2 Microsoft.UI.Xaml -Force
+Add-AppxPackage Microsoft.UI.Xaml.2.8.x64.appx
 Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
 Add-AppxPackage winget.msixbundle
 
